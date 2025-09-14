@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav's Professional Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(45deg, #007bff, #00d4ff);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #007bff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #0056b3;
+            transition: color 0.3s ease;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 30px;
+        }
+
+        .about {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about img {
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about img:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-item {
+            background-color: #e9f7ff;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,123,255,0.1);
+        }
+
+        .education-item, .project-item {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            display: none;
+            text-align: center;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .resumebtn {
+            display: inline-block;
+            padding: 12px 45px;
+            font-size: 1.2rem;
+            color: white;
+            background: linear-gradient(45deg, #007bff, #00d4ff);
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .resumebtn:hover {
+            background: linear-gradient(45deg, #00d4ff, #007bff);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                display: block;
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pranav's Professional Portfolio</h1>
+        <p>Tech Enthusiast | B.Tech CSE Student | IIIT Sri City</p>
+        <a href="#resume" class="resumebtn">View Resume</a>
+    </header>
+
+    <nav>
+        <a href="#personal-info">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#reflections">Reflections</a>
+        <a href="#extracurricular">Activities</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="personal-info">
+        <h2>About Me</h2>
+        <div class="about">
+            <img src="https://www.shutterstock.com/image-photo/handsome-smart-male-student-studying-600nw-2102457385.jpg" alt="Pranav">
+            <div>
+                <p>Hello! I'm Pranav, a third-year Computer Science Engineering student at IIIT Sri City. I’m passionate about coding, problem-solving, and exploring fields like artificial intelligence and software development.</p>
+                <p>Outside academics, I enjoy playing cricket, gaming, and contributing to tech communities. I’m keen to intern at tech firms to gain hands-on experience and grow my skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <p><strong>B.Tech in Computer Science Engineering</strong> - IIIT Sri City (2022-2026)</p>
+            <p>Focusing on algorithms, software engineering, and AI, with a current CGPA of 8.6.</p>
+        </div>
+        <div class="education-item">
+            <p><strong>Higher Secondary Education</strong> - Sri Chaitanya Junior College, Hyderabad (2020-2022)</p>
+            <p>Completed with 90% in MPC (Mathematics, Physics, Chemistry).</p>
+        </div>
+        <div class="education-item">
+            <p><strong>Secondary School Education</strong> - Delhi Public School, Hyderabad (2018-2020)</p>
+            <p>Graduated with 92%, strong in mathematics and computer science.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Programming</h3>
+                <ul>
+                    <li>C/C++</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML/CSS/JS</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3>Databases & Tools</h3>
+                <ul>
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3>Other</h3>
+                <ul>
+                    <li>Data Structures</li>
+                    <li>Algorithms</li>
+                    <li>Machine Learning Basics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects & Experience</h2>
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDPyNoOob34C322fqTI_-FWj_3yqVZMHG8GQ&s" alt="AI Prediction Model">
+                <p>AI Prediction Model: Built a machine learning model using Python to predict student performance, achieving 88% accuracy.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://example.com/project6.jpg" alt="E-Commerce Website">
+                <p>E-Commerce Website: Developed a responsive site with React and Node.js, featuring product listings and cart functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements & Awards</h2>
+        <ul>
+            <li>Best Hackathon Project: Won at IIIT Sri City Hackathon 2024 for the AI Prediction Model.</li>
+            <li>Merit Scholarship: Awarded by IIIT Sri City for academic performance, 2023-2024.</li>
+            <li>Coding Challenge Winner: Secured first place in CodeFest 2023 organized by IIIT Hyderabad.</li>
+        </ul>
+    </section>
+
+    <section id="reflections">
+        <h2>Personal Reflections</h2>
+        <p>My time at IIIT Sri City has been a transformative experience, pushing me to master coding and collaborate on innovative projects. Tackling tough assignments has built my resilience and technical skills.</p>
+        <p>I aspire to work in AI research and contribute to cutting-edge solutions. This portfolio marks my journey so far, and I’m excited to learn from industry experts.</p>
+    </section>
+
+    <section id="extracurricular">
+        <h2>Extracurricular & Volunteering</h2>
+        <ul>
+            <li>Member, Coding Club: Organized coding bootcamps for freshmen at IIIT Sri City, 2024.</li>
+            <li>Volunteer, Tech Outreach: Taught basic programming to rural students via a local NGO, 2023.</li>
+            <li>Cricket Team Captain: Led the college team in inter-IIT sports events, 2023-2024.</li>
+        </ul>
+    </section>
+
+    <section id="resume">
+        <h2>Resume & References</h2>
+        <p><a href="https://example.com/pranav-resume.pdf" class="resumebtn">Download Resume (PDF)</a></p>
+        <p><strong>References:</strong></p>
+        <ul>
+            <li>Prof. Vikram Singh: HoD, IIIT Sri City, vikram.singh@iiits.in - Academic Advisor.</li>
+            <li>Dr. Anil Sharma: Project Mentor, anil.sharma@iiits.in - Research Guide.</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact & Links</h2>
+        <p><strong>Email:</strong> pranav@iiits.in</p>
+        <p><strong>Phone:</strong> (987) 654-3210</p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/pranav-iiit">linkedin.com/in/pranav-iiit</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/pranav-iiit">github.com/pranav-iiit</a></p>
+        <p><strong>Portfolio Site:</strong> <a href="https://pranav-iiit.com">pranav-iiit.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pranav. Built with dedication.</p>
+    </footer>
+
+</body>
+</html>
